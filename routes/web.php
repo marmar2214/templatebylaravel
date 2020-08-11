@@ -12,9 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route=show data 
+//view=show user
 
-Route::get('/', function () {
-    // return view('welcome');
-    return 'Hello Laravel';
+Route::get('/','PageController@homefun')->name('home');       //view(page name)
     
-});
+
+//Data show Page
+
+Route::get('about','PageController@aboutfun')->name('aboutname');    //view(page name)
+
+
+Route::get('contact','PageController@contactfun')->name('contactname');           //view(page name)
+
+Route::get('simplepost','PageController@simplepostfun')->name('simplepostname'); 
